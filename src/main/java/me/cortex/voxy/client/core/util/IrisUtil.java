@@ -2,6 +2,7 @@ package me.cortex.voxy.client.core.util;
 
 import me.cortex.voxy.client.core.VoxyRenderSystem;
 import me.cortex.voxy.client.core.rendering.Viewport;
+import me.cortex.voxy.client.iris.IGetIrisVoxyPipelineData;
 import me.jellysquid.mods.sodium.client.render.chunk.ChunkRenderMatrices;
 import net.fabricmc.loader.api.FabricLoader;
 import net.irisshaders.iris.Iris;
