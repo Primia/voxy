@@ -50,6 +50,22 @@ public class IrisUtil {
         }
     }
 
+    public static void voxypipelinepatch() {
+        if (!IRIS_INSTALLED) {
+            return;
+        }
+        if (!irisShaderPackEnabled0()) {
+            return;
+        }
+        var pipeline = Iris.getPipelineManager().getPipelineNullable();
+        if (pipeline instanceof IGetIrisVoxyPipelineData getData) {
+            if (getData.voxy$getPipelineData() != null) {
+                return;
+            }
+        }
+        reload0();
+    }
+
     private static void clearIrisSamplers0() {
         for (int i = 0; i < 16; i++) {
             IrisRenderSystem.bindSamplerToUnit(i, 0);
