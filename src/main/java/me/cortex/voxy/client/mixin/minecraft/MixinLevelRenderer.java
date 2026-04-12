@@ -81,6 +81,9 @@ public abstract class MixinLevelRenderer implements IGetVoxyRenderSystem {
         if (world == null) {
             Logger.error("Null world selected");
             return;
+        }  
+        if (IrisUtil.SHADER_SUPPORT && IrisUtil.irisShaderPackEnabled()) {
+            IrisUtil.voxypipelinepatch();
         }
         try {
             this.renderer = new VoxyRenderSystem(world, instance.getServiceManager());
